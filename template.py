@@ -14,7 +14,11 @@ def mv(r, i = 1):
         r.move()
         i -= 1
 
-def setup():
+def setup(c = 10, r = 10, w = None):
+    if (w == None):
+        create_world(avenues = c, streets = r)
+    else:
+        load_world(w)
     r = Robot(beepers = 1)
     r.set_pause(0.2)
 
